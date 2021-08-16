@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title') Tambah Blog @endsection
+@section('title') Tambah Portfolio @endsection
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('admins/plugins/summernote/summernote-bs4.css') }}">
@@ -34,12 +34,12 @@
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1 class="m-0 text-dark">Blog</h1>
+				<h1 class="m-0 text-dark">Portolio</h1>
 			</div><!-- /.col -->
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
-					<li class="breadcrumb-item">Blog</li>
-					<li class="breadcrumb-item active">Tambah Blog</li>
+					<li class="breadcrumb-item">Portfolio</li>
+					<li class="breadcrumb-item active">Tambah Portfolio</li>
 				</ol>
 			</div><!-- /.col -->
 		</div><!-- /.row -->
@@ -54,7 +54,7 @@
 			<div class="col-12">
 				@if(session('success'))
 				<div class="alert alert-success alert-dismissible fade show" role="alert">
-					<strong>Berhasil Menambah Blog !</strong> <a href="{{route('blog.edit', session('success'))}}" class="alert-anchor">Sunting</a> atau <a href="{{route('blog.show', session('success'))}}" class="alert-anchor">Preview</a>
+					<strong>Berhasil Menambah Portfolio !</strong> <a href="{{route('blog.edit', session('success'))}}" class="alert-anchor">Sunting</a> atau <a href="{{route('blog.show', session('success'))}}" class="alert-anchor">Preview</a>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -82,9 +82,9 @@
 				</div>
 				@endif
 				<div class="card card-secondary card-outline">
-					<form method="post" enctype="multipart/form-data" action="{{route('blog.store')}}">
+					<form method="post" enctype="multipart/form-data" action="{{route('portfolio.store')}}">
 						<div class="card-header">
-							<h2 class="card-title"><i class="fa fa-newspaper"></i> Tambah Blog</h2>
+							<h2 class="card-title"><i class="fa fa-newspaper"></i> Tambah Porfolio</h2>
 							<button type="submit" class="btn btn-primary float-right"><i class="fa fa-paper-plane"></i> Publish</button>
 						</div>
 						<div class="card-body">
@@ -93,7 +93,7 @@
 								<div class="col-12">
 									<label>Judul</label>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="masukkan judul blog" name="judul" value="{{old('judul')}}">
+										<input type="text" class="form-control" placeholder="masukkan judul portfolio" name="judul" value="{{old('judul')}}">
 									</div>
 								</div>
 							</div>
@@ -110,16 +110,6 @@
 												<img id="preview" src="{{asset('picture.png')}}" width="90px" height="90px">
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="col-6">
-									<label>Kategori</label>									
-									<div class="form-group">
-										<select class="form-control" name="kategori">
-											@foreach($ktg as $ktgr)
-											<option value="{{$ktgr->id}}">{{$ktgr->nama}}</option>
-											@endforeach
-										</select>
 									</div>
 								</div>
 							</div>

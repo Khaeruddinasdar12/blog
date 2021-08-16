@@ -15,7 +15,10 @@ class BlogDetail extends Component
     }
     public function render()
     {
-        $data = Blog::where('slug', $this->slug)->first();
+        $data = Blog::with('kategori:id,nama')->where('slug', $this->slug)->first();
+        if($data == '') {
+            abort(404);
+        }
         // dd($data); 
         return view('livewire.blog-detail', ['data' => $data]);
     }

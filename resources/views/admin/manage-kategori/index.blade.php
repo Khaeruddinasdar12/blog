@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title') Tambah Kategori Berita @endsection
+@section('title') Tambah Kategori Blog @endsection
 
 @section('css')
 <link href="{{ asset('css/sweetalert2.min.css') }}" rel="stylesheet">
@@ -17,7 +17,7 @@
 			</div><!-- /.col -->
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
-					<li class="breadcrumb-item">Berita</li>
+					<li class="breadcrumb-item">Kategori</li>
 					<li class="breadcrumb-item active">Tambah Kategori</li>
 				</ol>
 			</div><!-- /.col -->
@@ -32,7 +32,7 @@
 			<div class="col-12">
 				<div class="card card-secondary card-outline">
 					<div class="card-header">
-						<h2 class="card-title"><i class="fa fa-folder-plus"></i> Tambah Kategori Berita</h2>
+						<h2 class="card-title"><i class="fa fa-folder-plus"></i> Tambah Kategori Blog</h2>
 						<div class="card-tools">
 							<button type="button" class="btn btn-tool" data-card-widget="collapse">
 								<i class="fas fa-minus"></i>
@@ -43,9 +43,9 @@
 					<div class="card-body">
 						<form method="post" id="add-kategori">
 							@csrf
-							<label>Kategori Berita</label>
+							<label>Kategori Blog</label>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="masukkan kategori berita" name="nama">
+								<input type="text" class="form-control" placeholder="masukkan kategori blog" name="nama">
 							</div>
 						</div>
 						<div class="card-footer">
@@ -58,7 +58,7 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-header card-secondary card-outline">
-						<h2 class="card-title"><i class="fa fa-th-list"></i> Daftar Kategori Berita</h2>
+						<h2 class="card-title"><i class="fa fa-th-list"></i> Daftar Kategori Blog</h2>
 						<div class="card-tools">
 							<button type="button" class="btn btn-tool" data-card-widget="collapse">
 								<i class="fas fa-minus"></i>
@@ -72,7 +72,7 @@
 								<thead>
 									<tr>
 										<th>No.</th>
-										<th>Nama Kategori Berita</th>
+										<th>Nama Kategori</th>
 										<th>Action</th>
 									</tr>
 								</thead>  
@@ -93,7 +93,7 @@
 			@csrf
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Edit Kategori Berita </h5>
+					<h5 class="modal-title">Edit Kategori Blog </h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -102,7 +102,7 @@
 				<div class="modal-body">
 					<input type="hidden" name="hidden_id" id="edit-kategori-id">
 					<div class="form-group">
-						<label>Nama Kategori Berita</label>
+						<label>Nama Kategori Blog</label>
 						<input type="text" class="form-control" name="nama" id="nama-kategori">
 					</div>
 				</div>
@@ -136,7 +136,7 @@
 	$('#edit-kategori').submit(function(e){ //edit kategori berita
 		e.preventDefault();
 		var request = new FormData(this);
-		var endpoint= '{{route("edit.kategori.berita")}}';
+		var endpoint= '';
 		$.ajax({
 			url: endpoint,
 			method: "POST",
@@ -166,7 +166,7 @@
 		e.preventDefault();
 
 		var request = new FormData(this);
-		var endpoint= '{{route("post.kategori.berita")}}';
+		var endpoint= '{{route("kategori.store")}}';
 		$.ajax({
 			url: endpoint,
 			method: "POST",
@@ -214,8 +214,14 @@
             '_token'  : token
           },
           success:function(data){
-          	$('#tabel_kategori').DataTable().ajax.reload();
-            berhasil(data.status, data.pesan);
+          	if(data.status == 'error') {
+          		berhasil(data.status, data.pesan);
+          	} else {
+          		berhasil(data.status, data.pesan);
+          		$('#tabel_kategori').DataTable().ajax.reload();
+          	}
+          	
+            
           },
           error: function(xhr, status, error){
             var error = xhr.responseJSON; 
@@ -240,7 +246,7 @@
 			"order": [[ 0, 'desc' ]],
 			"aLengthMenu": [[10, 25, 50],[ 10, 25, 50]],
 			"ajax":  {
-                "url":  '{{route("table.kategori.berita")}}', // URL file untuk proses select datanya
+                "url":  '{{route("table.kategori")}}', // URL file untuk proses select datanya
                 "type": "GET"
             },
             "columns": [

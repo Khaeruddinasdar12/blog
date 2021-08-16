@@ -32,7 +32,7 @@
   </ul>
   <ul class="navbar-nav ml-auto d-flex align-items-center">
     <li class="nav-item highlight">
-      <a class="nav-link" href="https://www.wowthemes.net/mundana-free-html-bootstrap-template/">Register Here</a>
+      <a class="nav-link" href="https://www.wowthemes.net/mundana-free-html-bootstrap-template/">Daftar Member</a>
   </li>
 </ul>
 </div>

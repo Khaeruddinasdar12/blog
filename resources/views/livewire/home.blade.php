@@ -34,48 +34,71 @@ HEADER
           <p>
             {!! substr($dt->isi, 0, 20) !!}
           </p>
-         <small class="text-muted">{{$dt->created_at}} &middot; by {{$dt->user->name}}</small>
-       </div>
-       <img height="120" src="{{ asset('storage/'. $dt->gambar) }}">
-     </div>
-     <hr>
-     @endforeach
-   </div>
-   <div class="col-md-4 pl-4">
-    <h5 class="font-weight-bold spanborder"><span>Portfolio Terbaru</span></h5>
-    <ol class="list-featured">
-      <li>
-        <span>
-          <h6 class="font-weight-bold">
-            <a href="./article.html" class="text-dark">Ikadipa App</a>
-          </h6>
-          <p class="text-muted">
-            November 2021 - Desember 2021
-          </p>
-        </span>
-      </li>
-      <li>
-        <span>
-          <h6 class="font-weight-bold">
-            <a href="./article.html" class="text-dark">Cr App</a>
-          </h6>
-          <p class="text-muted">
-            November 2021 - Desember 2021
-          </p>
-        </span>
-      </li>
-      <li>
-        <span>
-          <h6 class="font-weight-bold">
-            <a href="./article.html" class="text-dark">BoneKurir App</a>
-          </h6>
-          <p class="text-muted">
-            November 2021 - Desember 2021
-          </p>
-        </span>
-      </li>
-    </ol>
+          <small class="text-muted">{{$dt->created_at}} &middot; by {{$dt->user->name}}</small>
+        </div>
+        <img height="120" src="{{ asset('storage/'. $dt->gambar) }}">
+      </div>
+      <hr>
+      @endforeach
+      
+    </div>
+    <div class="col-md-4 pl-4">
+      <h5 class="font-weight-bold spanborder"><span>Portfolio Terbaru</span></h5>
+      <ol class="list-featured">
+        <li>
+          <span>
+            <h6 class="font-weight-bold">
+              <a href="./article.html" class="text-dark">Ikadipa App</a>
+            </h6>
+            <p class="text-muted">
+              November 2021 - Desember 2021
+            </p>
+          </span>
+        </li>
+        <li>
+          <span>
+            <h6 class="font-weight-bold">
+              <a href="./article.html" class="text-dark">Cr App</a>
+            </h6>
+            <p class="text-muted">
+              November 2021 - Desember 2021
+            </p>
+          </span>
+        </li>
+        <li>
+          <span>
+            <h6 class="font-weight-bold">
+              <a href="./article.html" class="text-dark">BoneKurir App</a>
+            </h6>
+            <p class="text-muted">
+              November 2021 - Desember 2021
+            </p>
+          </span>
+        </li>
+      </ol>
+    </div>
   </div>
-</div>
+  <div class="row justify-content-between">
+    <div class="col-md-8">
+      <div class="border p-5 bg-lightblue">
+        <div class="row justify-content-between">
+          <div class="col-md-5 mb-2 mb-md-0">
+            <h5 class="font-weight-bold secondfont">Member gratis</h5>
+            Dapatkan artikel terbaru dengan menjadi member. kami tidak pernah spam !
+          </div>
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" class="form-control" placeholder="Masukkan alamat e-mail">
+              </div>
+              <div class="col-md-12 mt-2">
+                <button type="submit" class="btn btn-success btn-block">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>

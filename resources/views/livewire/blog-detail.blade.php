@@ -19,7 +19,8 @@
   <div class="container pt-4 pb-4">
     <div class="row justify-content-center">
       <div class="col-md-12 col-lg-8">
-
+        <p class="text-muted">Kategori : <a href="../{{$data->kategori->nama}}">{{$data->kategori->nama}}</a></p>
+        
         {!! $data->isi !!}
         <div class="container pt-4 pb-4">
           <div class="border p-5 bg-lightblue mt-5">

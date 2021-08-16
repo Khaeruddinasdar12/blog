@@ -91,7 +91,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="" class="nav-link {{ request()->is('admin') || request()->is('admin/dashboard') ? 'active' : '' }}">
+            <a href="{{route('dashboard.index')}}" class="nav-link {{ request()->is('admin') ? 'active' : '' }}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -99,8 +99,8 @@
             </a>
           </li>
 
-          <li class="nav-item {{ request()->is('admin/manage-blog') || request()->is('admin/manage-blog/*')  ? 'has-treeview menu-open' : '' }}">
-            <a href="#" class="nav-link {{ request()->is('admin/manage-blog') || request()->is('admin/manage-blog/*') ? 'active' : '' }}">
+          <li class="nav-item {{ request()->is('admin/manage-blog') || request()->is('admin/manage-kategori') || request()->is('admin/manage-blog/*')  ? 'has-treeview menu-open' : '' }}">
+            <a href="#" class="nav-link {{ request()->is('admin/manage-blog') || request()->is('admin/manage-kategori') || request()->is('admin/manage-blog/*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-newspaper"></i>
               <p>
                 Manage Blog
@@ -109,7 +109,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link {{ request()->is('admin/berita/manage-kategori') ? 'active' : '' }}">
+                <a href="{{route('kategori.index')}}" class="nav-link {{ request()->is('admin/manage-kategori') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Manage Kategori</p>
                 </a>
@@ -129,8 +129,49 @@
             </ul>
           </li>
 
-          <li class="nav-header">Manage Users</li>
+          <li class="nav-item {{ request()->is('admin/manage-portfolio') || request()->is('admin/manage-portfolio/*')  ? 'has-treeview menu-open' : '' }}">
+            <a href="#" class="nav-link {{ request()->is('admin/manage-portfolio') || request()->is('admin/manage-portfolio/*') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-stream"></i>
+              <p>
+                Manage Portfolio
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('portfolio.create')}}" class="nav-link {{ request()->is('admin/manage-portfolio/create') ? 'active' : '' }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tambah Porfolio</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('portfolio.index')}}" class="nav-link {{ request()->is('admin/manage-portfolio') ? 'active' : '' }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>List Portfolio</p>
+                </a>
+              </li>
+            </ul>
+          </li>
 
+          <li class="nav-header">All Member</li>
+          <li class="nav-item">
+            <a href="{{route('member.index')}}" class="nav-link {{ request()->is('admin/member') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Member
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('komentar.index')}}" class="nav-link {{ request()->is('admin/komentar') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-comments"></i>
+              <p>
+                Komentar
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-header">Manage Users</li>
           <li class="nav-item">
             <a href="" class="nav-link {{ request()->is('admin/manage-pengecer') ? 'active' : '' }}">
               <i class="nav-icon fas fa-user-cog"></i>

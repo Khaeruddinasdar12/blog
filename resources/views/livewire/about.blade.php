@@ -77,7 +77,7 @@
            Saat ini penulis menjadi inisiator terbentuknya komunitas Startupdipa, yaitu komunitas yang beranggotakan Mahasiswa Universitas Dipa Makassar (ex STMIK Dipanegara). Startupdipa berfokus pada pegembangan sumber daya manusia yang menciptakan bisnis & produk. Kami dari Startupdipa memiliki visi No 1 Of Campus Startup Factory In East Indonesia. 
         </div>
         <div class="col-md-4">
-          <a target="_blank" href="https://www.instagram.com/startupdipa/" class="btn btn-warning btn-block"><i class="fa fa-instagram-square"></i> Instagram</a>
+          <a target="_blank" href="https://www.instagram.com/startupdipa/" class="btn btn-warning btn-block"><i class="fas fa-instagram"></i> Instagram</a>
         </div>
       </div>
     </div>

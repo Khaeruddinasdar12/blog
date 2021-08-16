@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('title')
-List Blog
+List Portfolio
 @endsection
 
 @section('css')
@@ -19,17 +19,17 @@ List Blog
 		<div class="col-12">
 			<div class="card">
 				<div class="card-header">
-					<h2 class="card-title"><i class="fa fa-newspaper"></i> List Blog</h2>
-					<a href="{{route('blog.create')}}" class="btn btn-primary btn-sm float-right"><i class="fa fa-plus"> Tambah Blog</i></a>
+					<h2 class="card-title"><i class="fa fa-newspaper"></i> List Portfolio</h2>
+					<a href="" class="btn btn-primary btn-sm float-right"><i class="fa fa-plus"> Tambah Portfolio</i></a>
 				</div>
 				<div class="card-body">
 					<div class="table-responsive-sm">
-						<table id="tabel_blog" class="table table-bordered" style="width:100% !important; ">
+						<table id="tabel_portfolio" class="table table-bordered" style="width:100% !important; ">
 							<thead>
 								<tr>
 									<th>No.</th>
 									<th>Judul</th>
-									<th>Kategori</th>
+									<th>Gambar</th>
 									<th>Action</th>
 								</tr>
 							</thead>  
@@ -91,7 +91,7 @@ List Blog
 		}
 
 		tabel = $(document).ready(function(){
-			$('#tabel_blog').DataTable({
+			$('#tabel_portfolio').DataTable({
 				"processing": true,
 				"serverSide": true,
 				"deferRender": true,
@@ -99,13 +99,13 @@ List Blog
 				"order": [[ 0, 'desc' ]],
 				"aLengthMenu": [[10, 25, 50],[ 10, 25, 50]],
 				"ajax": {
-                "url":  '{{route("table.blog")}}', // URL file untuk proses select datanya
+                "url":  '{{route("table.portfolio")}}', // URL file untuk proses select datanya
                 "type": "GET"
               },
               "columns": [
               { data: 'DT_RowIndex', name:'DT_RowIndex'},
               { "data": "judul" },
-              { "data": "kategori.nama" },
+              { "data": "gambar" },
               { "data": "action" },
               ]
             });
