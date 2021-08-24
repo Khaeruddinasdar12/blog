@@ -27,12 +27,12 @@
           <a class="nav-link" href="/contact">Contact</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="/contact">Portfolio</a>
+          <a class="nav-link" href="/portfolio">Portfolio</a>
       </li>
   </ul>
   <ul class="navbar-nav ml-auto d-flex align-items-center">
     <li class="nav-item highlight">
-      <a class="nav-link" href="https://www.wowthemes.net/mundana-free-html-bootstrap-template/">Daftar Member</a>
+      <a class="nav-link" href="/daftar-member">Daftar Member</a>
   </li>
 </ul>
 </div>

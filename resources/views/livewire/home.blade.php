@@ -48,30 +48,10 @@ HEADER
         <li>
           <span>
             <h6 class="font-weight-bold">
-              <a href="./article.html" class="text-dark">Ikadipa App</a>
+              <a href="#" class="text-dark">Coming Soon</a>
             </h6>
             <p class="text-muted">
-              November 2021 - Desember 2021
-            </p>
-          </span>
-        </li>
-        <li>
-          <span>
-            <h6 class="font-weight-bold">
-              <a href="./article.html" class="text-dark">Cr App</a>
-            </h6>
-            <p class="text-muted">
-              November 2021 - Desember 2021
-            </p>
-          </span>
-        </li>
-        <li>
-          <span>
-            <h6 class="font-weight-bold">
-              <a href="./article.html" class="text-dark">BoneKurir App</a>
-            </h6>
-            <p class="text-muted">
-              November 2021 - Desember 2021
+              September - Oktober 2021
             </p>
           </span>
         </li>

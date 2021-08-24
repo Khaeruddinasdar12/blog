@@ -16,6 +16,8 @@ Route::get('/about', App\Http\Livewire\About::class);
 Route::get('/blog', App\Http\Livewire\BlogIndex::class);
 Route::get('/blog/{category}', App\Http\Livewire\BlogCategory::class);
 Route::get('/blog/{category}/{slug}', App\Http\Livewire\BlogDetail::class);
+Route::get('/daftar-member', App\Http\Livewire\DaftarMember::class);
+Route::get('/portfolio', App\Http\Livewire\Portfolio::class);
 
 Route::prefix('admin')->group(function() {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
