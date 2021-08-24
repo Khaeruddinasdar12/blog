@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\KategoriController;
 use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\KomentarController;
+use App\Http\Controllers\Admin\PesanController;
 
 Auth::routes();
 Route::get('/', App\Http\Livewire\Home::class);
@@ -55,6 +56,10 @@ Route::prefix('admin')->group(function() {
     Route::get('/table-portfolio', [PortfolioController::class, 'tablePortfolio'])->name('table.portfolio');
     // END MANAGE PORTFOLIO
 
+
+    // PESAN ATAU KONTAK
+    Route::get('/kontak', [PesanController::class, 'index'])->name('kontak.index');
+    // END PESAN ATAU KONTAK
 
     // MEMBER
     Route::get('/member', [MemberController::class, 'index'])->name('member.index');

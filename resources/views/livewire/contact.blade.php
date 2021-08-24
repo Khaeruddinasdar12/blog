@@ -30,25 +30,48 @@
           </div>
           <div class="row justify-content-between">
             <div class="container pt-4 pb-4">
+              @if (count($errors) > 0)
+                <div class="alert alert-danger alert-dismissible fade show">
+                  <ul class="list-unstyled">
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                  </ul>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                @endif
+                @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>Sukses!</strong> {{session('success')}}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                @endif
+
+              <form wire:submit.prevent="savePesan()">
               <div class="col-md-12">
                 <div class="form-group">
                   <label><strong>Nama : </strong></label>
-                  <input type="text" class="form-control" placeholder="Nama Lengkap">
+                  <input type="text" class="form-control" placeholder="Nama Lengkap" wire:model="nama">
                 </div>
                 <div class="form-group">
                   <label><strong>Email :</strong> </label>
-                  <input type="email" class="form-control" placeholder="Email aktif">
+                  <input type="email" class="form-control" placeholder="Email aktif"wire:model="email">
                 </div>
                 <div class="form-group">
                   <label><strong>Judul :</strong> </label>
-                  <input type="text" class="form-control" placeholder="Judul">
+                  <input type="text" class="form-control" placeholder="Judul" wire:model="judul">
                 </div>
                 <div class="form-group">
                   <label><strong>Pesan :</strong> </label>
-                  <textarea placeholder="Pesan Anda" class="form-control" rows="4"></textarea>
+                  <textarea placeholder="Pesan Anda" class="form-control" rows="4" wire:model="pesan"></textarea>
                 </div>
                 <button type="submit" class="btn btn-success btn-block">Kirim Pesan</button>
               </div>
+            </form>
             </div>
           </div>
         </div>

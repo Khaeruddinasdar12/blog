@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Komentar extends Model
 {
+    protected $fillable = [
+        'nama', 'email', 'komentar', 'blog_id'
+    ];
+
     public function blog()
     {
         return $this->belongsTo('App\Blog', 'blog_id');

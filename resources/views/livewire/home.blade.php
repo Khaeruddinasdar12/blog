@@ -80,6 +80,26 @@ HEADER
   </div>
   <div class="row justify-content-between">
     <div class="col-md-8">
+      @if (count($errors) > 0)
+      <div class="alert alert-danger alert-dismissible fade show">
+        <ul class="list-unstyled">
+          @foreach ($errors->all() as $error)
+          <li>{{ $error }}</li>
+          @endforeach
+        </ul>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      @endif
+      @if(session('success'))
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Sukses!</strong> {{session('success')}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      @endif
       <div class="border p-5 bg-lightblue">
         <div class="row justify-content-between">
           <div class="col-md-5 mb-2 mb-md-0">
@@ -87,14 +107,16 @@ HEADER
             Dapatkan artikel terbaru dengan menjadi member. kami tidak pernah spam !
           </div>
           <div class="col-md-7">
-            <div class="row">
-              <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="Masukkan alamat e-mail">
+            <form wire:submit.prevent="saveMember">
+              <div class="row">
+                <div class="col-md-12">
+                  <input type="text" class="form-control" placeholder="Masukkan alamat e-mail" wire:model="email">
+                </div>
+                <div class="col-md-12 mt-2">
+                  <button type="submit" class="btn btn-success btn-block">Subscribe</button>
+                </div>
               </div>
-              <div class="col-md-12 mt-2">
-                <button type="submit" class="btn btn-success btn-block">Subscribe</button>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

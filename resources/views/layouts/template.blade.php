@@ -171,6 +171,16 @@
             </a>
           </li>
 
+          <li class="nav-header">Pesan atau kontak</li>
+          <li class="nav-item">
+            <a href="{{route('kontak.index')}}" class="nav-link {{ request()->is('admin/kontak') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                Pesan Atau Kontak
+              </p>
+            </a>
+          </li>
+
           <li class="nav-header">Manage Users</li>
           <li class="nav-item">
             <a href="" class="nav-link {{ request()->is('admin/manage-pengecer') ? 'active' : '' }}">
