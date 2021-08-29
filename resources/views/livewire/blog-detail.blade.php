@@ -11,7 +11,10 @@
     <br>
     <br>
     <div class="row justify-content-center">
+      @if($data->gambar != '')
       <img height="300" src="{{ asset('storage/'.$data->gambar) }}">
+      @else
+      @endif
     </div>
   </div>
 
