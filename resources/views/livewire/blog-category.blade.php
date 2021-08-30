@@ -20,7 +20,11 @@
             </p>
             <small class="text-muted">{{$dt->created_at}} &middot; by {{$dt->user->name}}</small>
           </div>
-          <img height="120" src="{{ asset('storage/'.$dt->gambar) }}">
+          @if($dt->gambar != '')
+          <img height="120" src="{{ asset('storage/'. $dt->gambar) }}">
+          @else
+          <img height="120" src="{{ asset('picture.png') }}">
+          @endif
         </div>
         <hr>
         @endforeach
