@@ -45,7 +45,7 @@
           Hallo. Nama saya <a target="_blank" href="https://linktr.ee/AsdarKH">Khaeruddin Asdar</a> dan akrab disapa Asdar atau Cedda, Saat ini saya sedang bekerja freelance dibidang SEO Specialist dan pembuatan website (aplikasi dan web profile). Saya biasanya mengerjakan <i>web application</i> menggunakan Laravel dan MySQL kemudian membuat website tersebut mudah dicari di mesin pencari seperti google, yahoo, bing dan lainnya. Untuk kegiatan menulis, biasanya mengisi blog atau artikel yang sesuai dengan beberapa kategori pada blog ini.
         </p>
         <p>
-         Lahir di Kabupaten Bone, Sulawesi Selatan kemudian bersekolah di SMKN 1 Watampone dan sekarang telah lulus dari Universitas Dipa Makassar (2021). Saat masa perkuliahan saya aktif berorganisasi baik external maupun internal, berikut adalah organisasi yang saya ikuti :
+         Lahir di Kabupaten Bone, Sulawesi Selatan kemudian bersekolah di SMKN 1 Watampone pada jurusan Teknik Komputer dan jaringan, kemudian sekarang telah lulus dari Universitas Dipa Makassar (2021) pada jurusan Teknik Informatika. Saat masa perkuliahan saya aktif berorganisasi baik external maupun internal, berikut adalah organisasi yang saya ikuti :
        </p>
        <ul>
         <li>KeDai Computerworks (internal)</li>

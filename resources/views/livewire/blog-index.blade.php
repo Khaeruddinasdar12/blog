@@ -16,7 +16,6 @@
               <a class="text-dark" href="blog/{{$dt->kategori->nama}}/{{$dt->slug}}">{{$dt->judul}}</a>
             </h2>
             <p>
-              {!! substr($dt->isi, 0, 20) !!}
             </p>
             <small class="text-muted">{{$dt->created_at}} &middot; by {{$dt->user->name}}</small>
           </div>
